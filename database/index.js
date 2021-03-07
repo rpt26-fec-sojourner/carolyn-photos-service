@@ -1,5 +1,19 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fec');
+
+const url = 'mongodb://127.0.0.1:27017/fec';
+mongoose.connect(url, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+  useUnifiedTopology: true
+});
+const db = mongoose.connection;
+db.once('open', _ => {
+  console.log('database connected: ', url);
+});
+db.on('error', err => {
+  console.log('db connection error: ', err);
+});
 
 let photoGallerySchema = mongoose.Schema({
   listingId: Number,
