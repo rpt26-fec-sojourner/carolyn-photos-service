@@ -1,12 +1,12 @@
-# Project Name
+# Airbnb Photo Gallery Service
 
-> Project description
+> Replication of Airbnb photo gallery module
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/rpt26-fec-sojourner/chloe-fec-title-service.git
+  - https://github.com/rpt26-fec-sojourner/jrudio-description-service.git
+  - https://github.com/rpt26-fec-sojourner/melanie-reviews-service.git
   - https://github.com/teamName/repo
 
 ## Table of Contents
