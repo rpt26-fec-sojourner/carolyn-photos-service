@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/fec');
 
 let photoGallerySchema = mongoose.Schema({
-  listingID: Number,
+  listingId: Number,
   photo1: [{ fullsize: String, thumbnail: String }],
   photo2: [{ fullsize: String, thumbnail: String }],
   photo3: [{ fullsize: String, thumbnail: String }],

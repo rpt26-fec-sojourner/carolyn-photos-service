@@ -1,5 +1,0 @@
-// AWS key
-
-module.exports = {
-
-}
