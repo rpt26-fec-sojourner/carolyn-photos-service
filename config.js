@@ -1,0 +1,5 @@
+// AWS key
+
+module.exports = {
+
+}
