@@ -3,19 +3,17 @@ const PhotoGallery = require('./index');
 
 const generateImageUrls = () => {
   const urls = [];
-  let imageCount = 0;
   let url;
   let thumbnailFile;
   let fullsizeFile;
-  let imageId = 100;
+  let imageNum = 1;
 
-  while (imageCount < 100) {
-    url = `https://picsum.photos/id/${imageId}`;
-    fullsizeFile = `${url}/600/400`;
-    thumbnailFile = `${url}/300/200`;
+  while (imageNum <= 104) {
+    url = 'https://fec-sojourner.s3.us-east-2.amazonaws.com/';
+    fullsizeFile = `${url}image${imageNum}.jpg`;
+    thumbnailFile = `${url}thumbnail${imageNum}.jpg`;
     urls.push({ fullsize: fullsizeFile, thumbnail: thumbnailFile });
-    imageId += 1;
-    imageCount += 1;
+    imageNum += 1;
   }
 
   return urls;
