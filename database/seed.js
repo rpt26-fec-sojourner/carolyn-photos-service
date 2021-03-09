@@ -70,4 +70,4 @@ const seedDb = () => {
   });
 };
 
-seedDb();
+// seedDb();
