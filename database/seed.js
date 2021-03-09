@@ -15,7 +15,6 @@ const generateImageUrls = () => {
     urls.push({ fullsize: fullsizeFile, thumbnail: thumbnailFile });
     imageNum += 1;
   }
-
   return urls;
 };
 
@@ -38,10 +37,8 @@ const composePhotoGalleries = () => {
       photo4: urls[getRandomIndex()],
       photo5: urls[getRandomIndex()]
     });
-
     listingId += 1;
   }
-
   return photoGalleries;
 };
 
