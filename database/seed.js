@@ -67,4 +67,4 @@ const seedDb = () => {
   });
 };
 
-// seedDb();
+module.exports = seedDb;
