@@ -21,19 +21,13 @@ let photoGallerySchema = mongoose.Schema({
   photo2: [{ fullsize: String, thumbnail: String }],
   photo3: [{ fullsize: String, thumbnail: String }],
   photo4: [{ fullsize: String, thumbnail: String }],
-  photo5: [{ fullsize: String, thumbnail: String }]
+  photo5: [{ fullsize: String, thumbnail: String }],
 });
 
 let PhotoGallery = mongoose.model('PhotoGallery', photoGallerySchema);
 
 const getPhotos = (id) => {
   return PhotoGallery.findOne({ listingId: id });
-  // .then((doc) => {
-  //   return doc;
-  // })
-  // .catch((err) => {
-  //   console.log('getPhotos database error', err);
-  // });
 };
 
 module.exports.getPhotos = getPhotos;

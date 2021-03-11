@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/photos/:id', (req, res) => {
   getPhotos(req.params.id)
     .then((photos) => {
-      // console.log(photos);
       res.send(photos);
     })
     .catch((err) => {
