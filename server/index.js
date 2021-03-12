@@ -17,7 +17,17 @@ app.get('/photos/:id', (req, res) => {
       console.log('getPhotos server error: ', err);
       res.end();
     });
+
+
 });
+
+// app.get('/photos/:id', (req, res) => {
+//   res.sendFile(process.cwd() + '/client/dist/index.html');
+// });
+
+// app.post('/photos:id', (req, res) => {
+//   res.send(`received POST request at /photos/${req.params.id}`);
+// });
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
