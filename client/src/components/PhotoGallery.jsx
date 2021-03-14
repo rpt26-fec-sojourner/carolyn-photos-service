@@ -64,3 +64,4 @@ class PhotoGallery extends React.Component {
 }
 
 export default PhotoGallery;
+// module.exports.PhotoGallery= PhotoGallery;
