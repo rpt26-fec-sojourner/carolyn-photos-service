@@ -9,9 +9,9 @@ class PhotoGallery extends React.Component {
       listingId: 1,
       photo1: '',
       photo2Thumbnail: '',
-      photo3: 'Thumbnail',
-      photo4: 'Thumbnail',
-      photo5: 'Thumbnail',
+      photo3: '',
+      photo4: '',
+      photo5: '',
       photo1Thumbnail: '',
       photo2Thumbnail: '',
       photo3Thumbnail: '',
@@ -22,7 +22,7 @@ class PhotoGallery extends React.Component {
   }
 
   getPhotos(id) {
-    axios.get(`/photos/${id}`)
+    axios.get(`/${id}/photos`)
       .then((response) => {
         console.log(response.data);
         this.setState ({
@@ -44,10 +44,10 @@ class PhotoGallery extends React.Component {
   }
 
   componentDidMount() {
-    this.getPhotos(this.state.listingId);
+    // this.getPhotos(this.state.listingId);
 
-    // let listingId = window.location.href.split('/').slice(-1);
-    // this.getPhotos(listingId);
+    let listingId = window.location.href.split('/').slice(-1);
+    this.getPhotos(listingId);
   }
 
   render() {
