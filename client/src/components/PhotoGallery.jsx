@@ -8,7 +8,7 @@ class PhotoGallery extends React.Component {
     this.state = {
       listingId: 1,
       photo1: '',
-      photo2Thumbnail: '',
+      photo2: '',
       photo3: '',
       photo4: '',
       photo5: '',
@@ -52,12 +52,24 @@ class PhotoGallery extends React.Component {
 
   render() {
     return (
-      <div>
-        <img src={this.state.photo1}></img>
-        <img src={this.state.photo2Thumbnail}></img>
-        <img src={this.state.photo3Thumbnail}></img>
-        <img src={this.state.photo4Thumbnail}></img>
-        <img src={this.state.photo5Thumbnail}></img>
+      <div className="container">
+        <div className="gallery">
+          <figure class="gallery_item gallery_item-1">
+            <img src={this.state.photo1} className="gallery_img" alt="image 1" style={{ borderRadius: '15px 0 0 15px' }}></img>
+          </figure>
+          <figure class="gallery_item gallery_item-2">
+            <img src={this.state.photo2} className="gallery_img" alt="image 2"></img>
+          </figure>
+          <figure class="gallery_item gallery_item-3">
+            <img src={this.state.photo3} className="gallery_img" alt="image 3" style={{ borderRadius: '0 15px 0 0' }}></img>
+          </figure>
+          <figure class="gallery_item gallery_item-4">
+            <img src={this.state.photo4} className="gallery_img" alt="image 4"></img>
+          </figure>
+          <figure class="gallery_item gallery_item-5">
+            <img src={this.state.photo5} className="gallery_img" alt="image 5" style={{ borderRadius: '0 0 15px 0' }}></img>
+          </figure>
+        </div>
       </div>
     );
   }
