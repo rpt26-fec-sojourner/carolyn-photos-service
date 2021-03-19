@@ -8,12 +8,12 @@ mongoose.connect(config.MONGO_URI, {
   useUnifiedTopology: true
 });
 const db = mongoose.connection;
-// db.once('open', _ => {
-//   console.log('database connected: ', config.MONGO_URI);
-// });
-// db.on('error', err => {
-//   console.log('db connection error: ', err);
-// });
+db.once('open', _ => {
+  console.log('database connected -- ', config.MONGO_URI);
+});
+db.on('error', err => {
+  console.log('db connection error: ', err);
+});
 
 let photoGallerySchema = mongoose.Schema({
   listingId: Number,
@@ -22,12 +22,8 @@ let photoGallerySchema = mongoose.Schema({
   photo3: [{ fullsize: String, thumbnail: String }],
   photo4: [{ fullsize: String, thumbnail: String }],
   photo5: [{ fullsize: String, thumbnail: String }],
+  photo6: [{ fullsize: String, thumbnail: String }],
+  photo7: [{ fullsize: String, thumbnail: String }],
 });
 
-let PhotoGallery = mongoose.model('PhotoGallery', photoGallerySchema);
-
-const getPhotos = (id) => {
-  return PhotoGallery.findOne({ listingId: id });
-};
-
-module.exports.getPhotos = getPhotos;
+module.exports = mongoose.model('PhotoGallery', photoGallerySchema);

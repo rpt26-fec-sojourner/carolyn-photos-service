@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const { getPhotos } = require('../database/index');
+// const { getPhotos } = require('../database/index');
+const { getPhotos } = require('../helpers/getPhotos');
 require('core-js/stable');
 require('regenerator-runtime/runtime');
 

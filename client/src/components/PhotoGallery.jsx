@@ -12,11 +12,15 @@ class PhotoGallery extends React.Component {
       photo3: '',
       photo4: '',
       photo5: '',
+      photo6: '',
+      photo7: '',
       photo1Thumbnail: '',
       photo2Thumbnail: '',
       photo3Thumbnail: '',
       photo4Thumbnail: '',
-      photo5Thumbnail: ''
+      photo5Thumbnail: '',
+      photo6Thumbnail: '',
+      photo7Thumbnail: ''
     };
     this.getPhotos = this.getPhotos.bind(this);
   }
@@ -24,18 +28,22 @@ class PhotoGallery extends React.Component {
   getPhotos(id) {
     axios.get(`/${id}/photos`)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState ({
           photo1: response.data.photo1[0].fullsize,
           photo2: response.data.photo2[0].fullsize,
           photo3: response.data.photo3[0].fullsize,
           photo4: response.data.photo4[0].fullsize,
           photo5: response.data.photo5[0].fullsize,
+          photo6: response.data.photo6[0].fullsize,
+          photo7: response.data.photo6[0].fullsize,
           photo1Thumbnail: response.data.photo1[0].thumbnail,
           photo2Thumbnail: response.data.photo2[0].thumbnail,
           photo3Thumbnail: response.data.photo3[0].thumbnail,
           photo4Thumbnail: response.data.photo4[0].thumbnail,
-          photo5Thumbnail: response.data.photo5[0].thumbnail
+          photo5Thumbnail: response.data.photo5[0].thumbnail,
+          photo6Thumbnail: response.data.photo6[0].thumbnail,
+          photo7Thumbnail: response.data.photo7[0].thumbnail
         });
       })
       .catch((error) => {
@@ -54,19 +62,19 @@ class PhotoGallery extends React.Component {
     return (
       <div className="container">
         <div className="gallery">
-          <figure class="gallery_item gallery_item-1">
+          <figure className="gallery_item gallery_item-1">
             <img src={this.state.photo1} className="gallery_img" alt="image 1" style={{ borderRadius: '15px 0 0 15px' }}></img>
           </figure>
-          <figure class="gallery_item gallery_item-2">
+          <figure className="gallery_item gallery_item-2">
             <img src={this.state.photo2} className="gallery_img" alt="image 2"></img>
           </figure>
-          <figure class="gallery_item gallery_item-3">
+          <figure className="gallery_item gallery_item-3">
             <img src={this.state.photo3} className="gallery_img" alt="image 3" style={{ borderRadius: '0 15px 0 0' }}></img>
           </figure>
-          <figure class="gallery_item gallery_item-4">
+          <figure className="gallery_item gallery_item-4">
             <img src={this.state.photo4} className="gallery_img" alt="image 4"></img>
           </figure>
-          <figure class="gallery_item gallery_item-5">
+          <figure className="gallery_item gallery_item-5">
             <img src={this.state.photo5} className="gallery_img" alt="image 5" style={{ borderRadius: '0 0 15px 0' }}></img>
           </figure>
         </div>
