@@ -62,21 +62,22 @@ class PhotoGallery extends React.Component {
     return (
       <div className="container">
         <div className="gallery">
-          <figure className="gallery_item gallery_item-1">
-            <img src={this.state.photo1} className="gallery_img" alt="image 1" style={{ borderRadius: '15px 0 0 15px' }}></img>
+          <figure className="gallery_item gallery_item_1">
+            <img src={this.state.photo1} className="gallery_img gallery_img_1" alt="image 1"></img>
           </figure>
-          <figure className="gallery_item gallery_item-2">
-            <img src={this.state.photo2} className="gallery_img" alt="image 2"></img>
+          <figure className="gallery_item gallery_item_2">
+            <img src={this.state.photo2} className="gallery_img gallery_img_2" alt="image 2"></img>
           </figure>
-          <figure className="gallery_item gallery_item-3">
-            <img src={this.state.photo3} className="gallery_img" alt="image 3" style={{ borderRadius: '0 15px 0 0' }}></img>
+          <figure className="gallery_item gallery_item_3">
+            <img src={this.state.photo3} className="gallery_img gallery_img_3" alt="image 3"></img>
           </figure>
-          <figure className="gallery_item gallery_item-4">
-            <img src={this.state.photo4} className="gallery_img" alt="image 4"></img>
+          <figure className="gallery_item gallery_item_4">
+            <img src={this.state.photo4} className="gallery_img gallery_img_4" alt="image 4"></img>
           </figure>
-          <figure className="gallery_item gallery_item-5">
-            <img src={this.state.photo5} className="gallery_img" alt="image 5" style={{ borderRadius: '0 0 15px 0' }}></img>
-          </figure>
+          <div className="gallery_item gallery_item_5">
+            <img src={this.state.photo5} className="gallery_img gallery_img_5" alt="image 5"></img>
+            <button className="btn"><i class="fas fa-th"></i> Show all photos</button>
+          </div>
         </div>
       </div>
     );
