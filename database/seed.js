@@ -35,7 +35,9 @@ const composePhotoGalleries = () => {
       photo2: urls[getRandomIndex()],
       photo3: urls[getRandomIndex()],
       photo4: urls[getRandomIndex()],
-      photo5: urls[getRandomIndex()]
+      photo5: urls[getRandomIndex()],
+      photo6: urls[getRandomIndex()],
+      photo7: urls[getRandomIndex()]
     });
     listingId += 1;
   }
@@ -57,7 +59,9 @@ const seedDb = () => {
         photo2: element.photo2,
         photo3: element.photo3,
         photo4: element.photo4,
-        photo5: element.photo5
+        photo5: element.photo5,
+        photo6: element.photo6,
+        photo7: element.photo7
       }).then(() => {
         console.log('data inserted');
       }).catch((err) => {
@@ -67,4 +71,5 @@ const seedDb = () => {
   });
 };
 
-module.exports = seedDb;
+seedDb();
+// module.exports = seedDb;
