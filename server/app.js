@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-// const { getPhotos } = require('../database/index');
 const { getPhotos } = require('../helpers/getPhotos');
 require('core-js/stable');
 require('regenerator-runtime/runtime');
@@ -26,10 +25,5 @@ app.get('/:id/photos', (req, res) => {
       res.end();
     });
 });
-
-// app.get('/:id/photos', (req, res) => {
-//   console.log(process.cwd() + '/client/dist/index.html');
-//   res.sendFile(process.cwd() + '/client/dist/index.html');
-// });
 
 module.exports = app;
