@@ -52,8 +52,6 @@ class PhotoGallery extends React.Component {
   }
 
   componentDidMount() {
-    // this.getPhotos(this.state.listingId);
-
     let listingId = window.location.href.split('/').slice(-1);
     this.getPhotos(listingId);
   }
