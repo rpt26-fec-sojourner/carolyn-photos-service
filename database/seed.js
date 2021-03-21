@@ -72,4 +72,5 @@ const seedDb = () => {
 };
 
 seedDb();
-// module.exports = seedDb;
+
+module.exports = seedDb;
