@@ -1,7 +1,7 @@
 const app = require('./app.js');
 const config = require('../config');
-const port = config.PORT;
+const port = 3000;
 
-app.listen(config.PORT, () => {
-  console.log(`app is running on http://localhost:${config.PORT}`);
+app.listen(port, () => {
+  console.log(`app is running on http://localhost:${port}`);
 });
