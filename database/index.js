@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const config = require('../config');
 
-mongoose.connect(config.MONGO_URI, {
+mongoose.connect('mongodb://127.0.0.1:27017/fec', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
@@ -9,7 +8,7 @@ mongoose.connect(config.MONGO_URI, {
 });
 const db = mongoose.connection;
 db.once('open', _ => {
-  console.log('database connected -- ', config.MONGO_URI);
+  console.log('database connected -- ', 'mongodb://127.0.0.1:27017/fec');
 });
 db.on('error', err => {
   console.log('db connection error: ', err);
