@@ -74,7 +74,9 @@ class PhotoGallery extends React.Component {
           </figure>
           <div className="gallery_item gallery_item_5">
             <img src={this.state.photo5} className="gallery_img gallery_img_5" alt="image 5"></img>
-            <button className="btn"><i class="fas fa-th"></i> Show all photos</button>
+            <div>
+              <button className="btn gallery_item_5"><i class="fas fa-th"></i> Show all photos</button>
+            </div>
           </div>
         </div>
       </div>

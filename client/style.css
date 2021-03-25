@@ -65,19 +65,21 @@
   grid-column-end: 13;
   grid-row-start: 3;
   grid-row-end: 5;
+  position: relative;
 }
 
 .btn {
   background-color: white;
   position: absolute;
-  top: 350px;
-  right: 185px;
+  bottom: 20px;
+  right: 20px;
   padding: 10px 20px;
   border-radius: 10px;
   color: 626262;
   font-weight: 545;
   cursor: pointer;
 }
+
 .gallery_img_5 {
   border-radius: 0 0 10px 0;
 }
