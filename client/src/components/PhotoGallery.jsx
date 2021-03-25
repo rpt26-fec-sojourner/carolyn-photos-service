@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTh } from '@fortawesome/free-solid-svg-icons';
 
 class PhotoGallery extends React.Component {
   constructor(props) {
@@ -75,7 +77,8 @@ class PhotoGallery extends React.Component {
           <div className="gallery_item gallery_item_5">
             <img src={this.state.photo5} className="gallery_img gallery_img_5" alt="image 5"></img>
             <div>
-              <button className="btn gallery_item_5"><i class="fas fa-th"></i> Show all photos</button>
+              {/* <button className="btn gallery_item_5"><i class="fas fa-th"></i> Show all photos</button> */}
+              <button className="btn gallery_item_5"><FontAwesomeIcon icon={faTh} /> Show all photos</button>
             </div>
           </div>
         </div>
