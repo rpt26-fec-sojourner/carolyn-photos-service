@@ -9,6 +9,7 @@ class PhotoGallery extends React.Component {
     super(props);
     this.state = {
       listingId: 1,
+      isMainPage: true,
       photo1: '',
       photo2: '',
       photo3: '',
@@ -25,12 +26,12 @@ class PhotoGallery extends React.Component {
       photo7Thumbnail: ''
     };
     this.getPhotos = this.getPhotos.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   getPhotos(id) {
     axios.get(`http://localhost:3000/${id}/photos`)
       .then((response) => {
-        // console.log(response.data);
         this.setState ({
           photo1: response.data.photo1[0].fullsize,
           photo2: response.data.photo2[0].fullsize,
@@ -58,31 +59,45 @@ class PhotoGallery extends React.Component {
     this.getPhotos(listingId);
   }
 
+  handleClick() {
+    this.setState({
+      isMainPage: false
+    });
+  }
+
   render() {
-    return (
-      <div className="container">
-        <div className="gallery">
-          <figure className="gallery_item gallery_item_1">
-            <img src={this.state.photo1} className="gallery_img gallery_img_1" alt="image 1"></img>
-          </figure>
-          <figure className="gallery_item gallery_item_2">
-            <img src={this.state.photo2} className="gallery_img gallery_img_2" alt="image 2"></img>
-          </figure>
-          <figure className="gallery_item gallery_item_3">
-            <img src={this.state.photo3} className="gallery_img gallery_img_3" alt="image 3"></img>
-          </figure>
-          <figure className="gallery_item gallery_item_4">
-            <img src={this.state.photo4} className="gallery_img gallery_img_4" alt="image 4"></img>
-          </figure>
-          <div className="gallery_item gallery_item_5">
-            <img src={this.state.photo5} className="gallery_img gallery_img_5" alt="image 5"></img>
-            <div>
-              <button className="btn gallery_item_5"><FontAwesomeIcon icon={faTh} /> Show all photos</button>
-            </div>
-          </div>
+    const isMainPage = this.state.isMainPage;
+    // if (this.state.isMainPage) {
+      return (
+        <div>
+          { isMainPage
+            ?
+              <div className="container">
+                <div className="gallery">
+                  <figure className="gallery_item gallery_item_1">
+                    <img src={this.state.photo1} className="gallery_img gallery_img_1" alt="image 1"></img>
+                  </figure>
+                  <figure className="gallery_item gallery_item_2">
+                    <img src={this.state.photo2} className="gallery_img gallery_img_2" alt="image 2"></img>
+                  </figure>
+                  <figure className="gallery_item gallery_item_3">
+                    <img src={this.state.photo3} className="gallery_img gallery_img_3" alt="image 3"></img>
+                  </figure>
+                  <figure className="gallery_item gallery_item_4">
+                    <img src={this.state.photo4} className="gallery_img gallery_img_4" alt="image 4"></img>
+                  </figure>
+                  <div className="gallery_item gallery_item_5">
+                    <img src={this.state.photo5} className="gallery_img gallery_img_5" alt="image 5"></img>
+                    <div>
+                      <button className="btn gallery_item_5" onClick={this.handleClick}><FontAwesomeIcon icon={faTh} /> Show all photos</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            : <AllPhotos />
+          }
         </div>
-      </div>
-    );
+      );
   }
 }
 
