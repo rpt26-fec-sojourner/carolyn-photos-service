@@ -68,7 +68,6 @@ class PhotoGallery extends React.Component {
 
   render() {
     const isMainPage = this.state.isMainPage;
-    // if (this.state.isMainPage) {
       return (
         <div>
           { isMainPage

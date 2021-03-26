@@ -83,3 +83,9 @@
 .gallery_img_5 {
   border-radius: 0 0 10px 0;
 }
+
+.back {
+  margin-top: 2em;
+  margin-left: 2em;
+  cursor: pointer;
+}
