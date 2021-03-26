@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTh } from '@fortawesome/free-solid-svg-icons';
+import AllPhotos from './AllPhotos.jsx';
 
 class PhotoGallery extends React.Component {
   constructor(props) {
@@ -61,7 +62,7 @@ class PhotoGallery extends React.Component {
 
   handleClick() {
     this.setState({
-      isMainPage: false
+      isMainPage: !this.state.isMainPage
     });
   }
 
