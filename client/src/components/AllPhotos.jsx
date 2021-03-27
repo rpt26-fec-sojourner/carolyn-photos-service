@@ -1,12 +1,24 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const AllPhotos = (props) => {
   return (
     <div>
       <div className="back">
-        <FontAwesomeIcon icon={faChevronLeft} onClick={props.handleClick} />
+        <span>
+          <FontAwesomeIcon icon={faChevronLeft} onClick={props.handleClick} />
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faShareSquare} />
+          Share
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faHeart} />
+          Save
+        </span>
       </div>
       <div className="container">
         <div className="scroll">
