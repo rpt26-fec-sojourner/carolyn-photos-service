@@ -3,8 +3,6 @@
   margin-left: 2em;
   cursor: pointer;
   color: #222223;
-  /* position: -webkit-sticky;
-  position: sticky; */
 }
 
 .header-right {
@@ -26,9 +24,9 @@
 
 .scroll {
   display: grid;
-  grid-template-columns: repeat(6, 155px);
-  grid-template-rows: repeat(14, 155px);
-  grid-gap: 7px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 8px;
 }
 
 .scroll_img {
@@ -39,49 +37,35 @@
 
 .scroll_item_1 {
   grid-column-start: 1;
-  grid-column-end: 7;
-  grid-row-start: 1;
-  grid-row-end: 5;
+  grid-column-end: 3;
 }
 
 .scroll_item_2 {
   grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-column-end: 2;
 }
 
 .scroll_item_3 {
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .scroll_item_4 {
   grid-column-start: 1;
-  grid-column-end: 7;
-  grid-row-start: 7;
-  grid-row-end: 11;
+  grid-column-end: 3;
 }
 
 .scroll_item_5 {
   grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 11;
-  grid-row-end: 13;
+  grid-column-end: 2;
 }
 
 .scroll_item_6 {
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 11;
-  grid-row-end: 13;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .scroll_item_7 {
   grid-column-start: 1;
-  grid-column-end: 7;
-  grid-row-start: 13;
-  grid-row-end: 17;
+  grid-column-end: 3;
 }
