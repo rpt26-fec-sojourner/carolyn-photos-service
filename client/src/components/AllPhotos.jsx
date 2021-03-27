@@ -7,18 +7,14 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 const AllPhotos = (props) => {
   return (
     <div>
-      <div className="back">
-        <span>
-          <FontAwesomeIcon icon={faChevronLeft} onClick={props.handleClick} />
-        </span>
-        <span>
-          <FontAwesomeIcon icon={faShareSquare} />
-          Share
-        </span>
-        <span>
-          <FontAwesomeIcon icon={faHeart} />
-          Save
-        </span>
+      <div className="header">
+        <span><FontAwesomeIcon icon={faChevronLeft} onClick={props.handleClick} /></span>
+        <div className="header-right">
+          <span><FontAwesomeIcon icon={faShareSquare} /> Share</span>
+          <span className="save">
+            <span><FontAwesomeIcon icon={faHeart} /> Save</span>
+          </span>
+        </div>
       </div>
       <div className="container">
         <div className="scroll">
