@@ -1,6 +1,7 @@
 import React from 'react';
 import PhotoGallery from './PhotoGallery.jsx';
-import '../../style.css';
+import '../../styles/photogallery.css';
+import '../../styles/allphotos.css';
 
 const App = () => {
   return (

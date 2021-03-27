@@ -39,7 +39,7 @@ class PhotoGallery extends React.Component {
           photo4: response.data.photo4[0].fullsize,
           photo5: response.data.photo5[0].fullsize,
           photo6: response.data.photo6[0].fullsize,
-          photo7: response.data.photo6[0].fullsize,
+          photo7: response.data.photo7[0].fullsize,
           photo1Thumbnail: response.data.photo1[0].thumbnail,
           photo2Thumbnail: response.data.photo2[0].thumbnail,
           photo3Thumbnail: response.data.photo3[0].thumbnail,
@@ -93,7 +93,7 @@ class PhotoGallery extends React.Component {
                   </div>
                 </div>
               </div>
-            : <AllPhotos handleClick={this.handleClick}/>
+            : <AllPhotos handleClick={this.handleClick} photo1={this.state.photo1} photo2={this.state.photo2} photo3={this.state.photo3} photo4={this.state.photo4} photo5={this.state.photo5} photo6={this.state.photo6} photo7={this.state.photo7}/>
           }
         </div>
       );
