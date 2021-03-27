@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: repeat(12, 90px);
   grid-template-rows: repeat(4, 90px);
-  grid-gap: 5px;
+  grid-gap: 7px;
 }
 
 .gallery_img {

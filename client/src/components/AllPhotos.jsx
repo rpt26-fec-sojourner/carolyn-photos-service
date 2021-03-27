@@ -16,7 +16,7 @@ const AllPhotos = (props) => {
           </span>
         </div>
       </div>
-      <div className="container">
+      <div className="container_2">
         <div className="scroll">
           <figure className="scroll_item scroll_item_1">
             <img src={props.photo1} className="scroll_img scroll_img_1" alt="image 1"></img>

@@ -3,6 +3,8 @@
   margin-left: 2em;
   cursor: pointer;
   color: #222223;
+  /* position: -webkit-sticky;
+  position: sticky; */
 }
 
 .header-right {
@@ -17,9 +19,69 @@
   margin-left: 1em;
 }
 
-/*
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #222223
-*/
+.container_2 {
+  width: 67%;
+  margin: 2rem auto;
+}
+
+.scroll {
+  display: grid;
+  grid-template-columns: repeat(6, 155px);
+  grid-template-rows: repeat(14, 155px);
+  grid-gap: 7px;
+}
+
+.scroll_img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.scroll_item_1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.scroll_item_2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.scroll_item_3 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.scroll_item_4 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 7;
+  grid-row-end: 11;
+}
+
+.scroll_item_5 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 11;
+  grid-row-end: 13;
+}
+
+.scroll_item_6 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 11;
+  grid-row-end: 13;
+}
+
+.scroll_item_7 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 13;
+  grid-row-end: 17;
+}
