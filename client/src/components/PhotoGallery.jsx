@@ -26,7 +26,6 @@ class PhotoGallery extends React.Component {
       photo6Thumbnail: '',
       photo7Thumbnail: ''
     };
-    this.getPhotos = this.getPhotos.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -94,7 +93,7 @@ class PhotoGallery extends React.Component {
                   </div>
                 </div>
               </div>
-            : <AllPhotos />
+            : <AllPhotos handleClick={this.handleClick}/>
           }
         </div>
       );
