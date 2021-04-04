@@ -1,1 +1,1 @@
-ssh -i "/Users/carolyntran/Documents/hack_reactor/rpt26/rpt26-front-end-capstone-photos-service/fecPhotos.pem" ubuntu@ec2-52-14-120-89.us-east-2.compute.amazonaws.com
+ssh -i "/Users/carolyntran/Documents/hack_reactor/rpt26/rpt26-front-end-capstone-photos-service/fecImagesService.pem" ubuntu@ec2-52-14-120-89.us-east-2.compute.amazonaws.com
