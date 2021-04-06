@@ -30,7 +30,8 @@ class PhotoGallery extends React.Component {
   }
 
   getPhotos(id) {
-    axios.get(`http://localhost:3000/${id}/photos`)
+    // axios.get(`http://localhost:3000/${id}/photos`)
+    axios.get(`/${id}/photos`)
       .then((response) => {
         this.setState ({
           photo1: response.data.photo1[0].fullsize,
