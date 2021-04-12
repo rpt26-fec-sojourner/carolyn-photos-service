@@ -61,17 +61,25 @@ class PhotoGallery extends React.Component {
   }
 
   handleClick() {
+    // if (this.state.isMainPage) {
+    //   const topnav = document.querySelector('.topnav');
+    //   if (topnav) { topnav.remove() };
+    //   const title = document.querySelector('#title');
+    //   if (title) { title.remove() };
+    //   const description = document.querySelector('#description');
+    //   if (description) { description.remove() };
+    //   const reviews = document.querySelector('#reviews');
+    //   if (reviews) { reviews.remove() };
+    // }
     if (this.state.isMainPage) {
       const topnav = document.querySelector('.topnav');
-      if (topnav) { topnav.remove() };
+      if (topnav) { topnav.style.display = 'none' };
       const title = document.querySelector('#title');
-      if (title) { title.remove() };
+      if (title) { title.style.display = 'none' };
       const description = document.querySelector('#description');
-      if (description) { description.remove() };
+      if (description) { description.style.display = 'none' };
       const reviews = document.querySelector('#reviews');
-      if (reviews) { reviews.remove() };
-    } else {
-      window.location.reload();
+      if (reviews) { reviews.style.display = 'none' };
     }
     this.setState({
       isMainPage: !this.state.isMainPage
