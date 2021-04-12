@@ -70,6 +70,8 @@ class PhotoGallery extends React.Component {
       if (description) { description.remove() };
       const reviews = document.querySelector('#reviews');
       if (reviews) { reviews.remove() };
+    } else {
+      location.reload();
     }
     this.setState({
       isMainPage: !this.state.isMainPage
