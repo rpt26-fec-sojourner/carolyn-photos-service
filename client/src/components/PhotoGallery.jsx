@@ -80,6 +80,15 @@ class PhotoGallery extends React.Component {
       if (description) { description.style.display = 'none' };
       const reviews = document.querySelector('#reviews');
       if (reviews) { reviews.style.display = 'none' };
+    } else {
+      const topnav = document.querySelector('.topnav');
+      if (topnav) { topnav.style.display = 'block' };
+      const title = document.querySelector('#title');
+      if (title) { title.style.display = 'block' };
+      const description = document.querySelector('#description');
+      if (description) { description.style.display = 'block' };
+      const reviews = document.querySelector('#reviews');
+      if (reviews) { reviews.style.display = 'block' };
     }
     this.setState({
       isMainPage: !this.state.isMainPage
