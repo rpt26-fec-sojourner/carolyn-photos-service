@@ -62,14 +62,14 @@ class PhotoGallery extends React.Component {
 
   handleClick() {
     if (this.state.isMainPage) {
-      const topnav = document.getElementsByClassName('topnav');
-      if (topnav) { topnav.innerHTML = '' };
-      const title = document.getElementById('title');
-      if (title) { title.innerHTML = '' };
-      const description = document.getElementById('description');
-      if (description) { description.innerHTML = '' };
-      const reviews = document.getElementById('reviews');
-      if (reviews) { reviews.innerHTML = '' };
+      const topnav = document.querySelector('.topnav');
+      if (topnav) { topnav.remove() };
+      const title = document.querySelector('#title');
+      if (title) { title.remove() };
+      const description = document.querySelector('#description');
+      if (description) { description.remove() };
+      const reviews = document.querySelector('#reviews');
+      if (reviews) { reviews.remove() };
     }
     this.setState({
       isMainPage: !this.state.isMainPage
