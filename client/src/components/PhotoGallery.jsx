@@ -71,7 +71,7 @@ class PhotoGallery extends React.Component {
     //   const reviews = document.querySelector('#reviews');
     //   if (reviews) { reviews.remove() };
     // }
-    if (this.state.isMainPage === false) {
+    if (this.state.isMainPage) {
       const topnav = document.querySelector('.topnav');
       if (topnav) { topnav.style.display = 'none' };
       const title = document.querySelector('#title');
@@ -80,7 +80,7 @@ class PhotoGallery extends React.Component {
       if (description) { description.style.display = 'none' };
       const reviews = document.querySelector('#reviews');
       if (reviews) { reviews.style.display = 'none' };
-    } else if (this.state.isMainPage === true) {
+    } else {
       const topnav = document.querySelector('.topnav');
       if (topnav) { topnav.style.display = 'block' };
       const title = document.querySelector('#title');
