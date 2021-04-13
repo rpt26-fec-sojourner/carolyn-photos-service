@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import PhotoGallery from './PhotoGallery.jsx';
 import '../../styles/photogallery.css';
 import '../../styles/allphotos.css';
