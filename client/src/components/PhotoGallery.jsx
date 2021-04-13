@@ -30,7 +30,6 @@ class PhotoGallery extends React.Component {
   }
 
   getPhotos(id) {
-    // axios.get(`http://localhost:3000/${id}/photos`)
     axios.get(`http://18.219.186.237/${id}/photos`)
       .then((response) => {
         this.setState ({
@@ -61,16 +60,6 @@ class PhotoGallery extends React.Component {
   }
 
   handleClick() {
-    // if (this.state.isMainPage) {
-    //   const topnav = document.querySelector('.topnav');
-    //   if (topnav) { topnav.remove() };
-    //   const title = document.querySelector('#title');
-    //   if (title) { title.remove() };
-    //   const description = document.querySelector('#description');
-    //   if (description) { description.remove() };
-    //   const reviews = document.querySelector('#reviews');
-    //   if (reviews) { reviews.remove() };
-    // }
     if (this.state.isMainPage) {
       const topnav = document.querySelector('.topnav');
       if (topnav) { topnav.style.display = 'none' };
