@@ -70,7 +70,7 @@
 
 .btn {
   background-color: white;
-  position: absolute;
+  position: relative;
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
@@ -78,6 +78,7 @@
   color: 626262;
   font-weight: 545;
   cursor: pointer;
+  border: 1px solid #222223;
 }
 
 .gallery_img_5 {
