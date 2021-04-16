@@ -64,7 +64,7 @@ class PhotoGallery extends React.Component {
     const title = document.querySelector('#title');
     const description = document.querySelector('#description');
     const reviews = document.querySelector('#reviews');
-    const host = document.querySelector('.host');
+    const host = document.querySelector('#host');
     const footer = document.querySelector('.footer');
     if (this.state.isMainPage) {
       if (topnav) { topnav.style.display = 'none' };
