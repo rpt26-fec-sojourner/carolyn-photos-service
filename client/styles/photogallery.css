@@ -14,8 +14,8 @@
 .gallery {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(4, 270px);
-  grid-template-rows: repeat(2, 178px);
+  grid-template-columns: repeat(4, 275px);
+  grid-template-rows: repeat(2, 182px);
   grid-gap: 8px;
 }
 
